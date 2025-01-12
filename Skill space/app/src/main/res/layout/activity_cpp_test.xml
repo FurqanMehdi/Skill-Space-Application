@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".cpp_test">
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#c2b2ef"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="C++ Test"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ScrollView to contain the questions -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintBottom_toTopOf="@+id/submit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/questions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Question 1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What is a correct syntax to output 'Hello World' in C++?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question1_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="cout &lt;&lt; 'Hello World';" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="print('Hello World');" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Console.WriteLine('Hello World');" />
+            </RadioGroup>
+
+            <!-- Question 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Which data type is used to create a variable that should store text?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question2_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="String" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Text" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="string" />
+            </RadioGroup>
+
+            <!-- Question 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. What is the correct way to declare a pointer in C++?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question3_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="int ptr;" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="int *ptr;" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ptr int;" />
+            </RadioGroup>
+
+            <!-- Question 4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Which operator is used to allocate memory dynamically in C++?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question4_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="malloc" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="new" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="allocate" />
+            </RadioGroup>
+
+            <!-- Question 5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Which of the following is a valid access specifier in C++?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question5_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="internal" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="protected" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="static" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

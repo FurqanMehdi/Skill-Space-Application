@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Skillspace</string>
+    <string name="app_logo">App Logo</string>
+    <string name="welcome_user">Welcome User</string>
+    <string name="profile">Profile</string>
+    <string name="search_courses">Search courses</string>
+    <string name="search">Search</string>
+    <string name="welcom_to_skillspace">WELCOM TO SKILLSPACE</string>
+</resources>

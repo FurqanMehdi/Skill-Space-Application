@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c2b2ef"
+    tools:context=".Test">
+
+    <!-- Test Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="405dp"
+        android:layout_height="52dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Test"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="#6054a4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Course 1 -->
+    <TextView
+        android:id="@+id/course1_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:text="Course 1: C++ Programming"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/course1_button"
+        app:layout_constraintTop_toBottomOf="@id/heading" />
+
+    <Button
+        android:id="@+id/course1_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:enabled="false"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/course1_name"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Course 2 -->
+    <TextView
+        android:id="@+id/course2_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:text="Course 2: Web Development"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/course2_button"
+        app:layout_constraintTop_toBottomOf="@id/course1_name" />
+
+    <Button
+        android:id="@+id/course2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:enabled="false"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/course2_name"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Course 3 -->
+    <TextView
+        android:id="@+id/course3_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:text="Course 3: Android Development"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/course3_button"
+        app:layout_constraintTop_toBottomOf="@id/course2_name" />
+
+    <Button
+        android:id="@+id/course3_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:enabled="false"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/course3_name"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Course 4 -->
+    <TextView
+        android:id="@+id/course4_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Course 4: Advanced Python"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/course4_button"
+        app:layout_constraintTop_toBottomOf="@id/course3_name" />
+
+    <Button
+        android:id="@+id/course4_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintTop_toTopOf="@id/course4_name"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Course 5 -->
+    <TextView
+        android:id="@+id/course5_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:text="Course 5: Data Science"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/course5_button"
+        app:layout_constraintTop_toBottomOf="@id/course4_name" />
+
+    <Button
+        android:id="@+id/course5_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintTop_toTopOf="@id/course5_name"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

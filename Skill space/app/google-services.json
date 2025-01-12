@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583595934616",
+    "project_id": "skillspace-7ff72",
+    "storage_bucket": "skillspace-7ff72.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583595934616:android:5dcc71ca0e6dddb31fa1ed",
+        "android_client_info": {
+          "package_name": "com.example.skillspace"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9brV-0moqs7z1qI9Q-TWgIcELQ0dFdyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

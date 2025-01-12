@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".python_test">
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#c2b2ef"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="Python Test"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ScrollView to contain the questions -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintBottom_toTopOf="@+id/submit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/questions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Question 1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What is the correct syntax to output 'Hello World' in Python?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question1_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="print('Hello World')" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="echo 'Hello World'" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System.out.println('Hello World')" />
+            </RadioGroup>
+
+            <!-- Question 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Which data type is used to store true or false values in Python?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question2_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bool" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="boolean" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="int" />
+            </RadioGroup>
+
+            <!-- Question 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. How do you define a function in Python?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question3_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="def function_name():" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="function function_name():" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="create function_name():" />
+            </RadioGroup>
+
+            <!-- Question 4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Which Python keyword is used to create an object of a class?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question4_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="new" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="create" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="object" />
+            </RadioGroup>
+
+            <!-- Question 5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. What is used to handle exceptions in Python?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question5_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="try/except" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="catch/throw" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="error/handle" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

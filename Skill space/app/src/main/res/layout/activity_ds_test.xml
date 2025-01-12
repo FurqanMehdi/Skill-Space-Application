@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ds_test">
+
+    <!-- Heading -->
+
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#c2b2ef"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="Data Science Test"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ScrollView to contain the questions -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        app:layout_constraintBottom_toTopOf="@+id/submit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/questions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Question 1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. What is the primary purpose of data cleaning in data science?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question1_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To remove irrelevant data" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To organize and prepare data for analysis" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To visualize the data" />
+            </RadioGroup>
+
+            <!-- Question 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Which of the following is a common tool used for data visualization in data science?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question2_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TensorFlow" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Matplotlib" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GitHub" />
+            </RadioGroup>
+
+            <!-- Question 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. What is the difference between supervised and unsupervised learning?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question3_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Supervised learning uses labeled data, while unsupervised learning does not" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Supervised learning is faster than unsupervised learning" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Unsupervised learning is used for classification tasks, while supervised learning is used for regression tasks" />
+            </RadioGroup>
+
+            <!-- Question 4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. What is the purpose of using a decision tree in machine learning?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question4_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To predict outcomes based on historical data" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To visualize data" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To clean the data" />
+            </RadioGroup>
+
+            <!-- Question 5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. What is feature scaling used for in machine learning?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question5_radio_group">
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To normalize the data to a specific range" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To increase the complexity of the model" />
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To remove outliers from the data" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
